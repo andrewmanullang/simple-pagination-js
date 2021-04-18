@@ -28,7 +28,8 @@ const renderPagination = ({ total, limit, page }) => {
     currentPage = totalPages;
   }
 
-  if (totalPages < maxPages) {
+  if (totalPages <= maxPages) {
+    // if total is equal or less, show all
     startPage = 1;
     endPage = totalPages;
   } else {
