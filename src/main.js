@@ -127,7 +127,8 @@ const renderSpinner = (isOn) => {
 };
 
 const getData = (page) => {
-  return fetch(`http://blinterview.mocklab.io/pagination?page=${page}`)
+  const galleryApi = `https://galleryapi.mocklab.io/v1/gallery`;
+  return fetch(`${galleryApi}?page=${page}`)
     .then((res) => res.json())
     .then((res) => res);
 };
