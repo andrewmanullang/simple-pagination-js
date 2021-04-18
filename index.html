@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pagination</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <section class="content">
+        <div class="gallery"></div>
+      </section>
+
+      <template id="galleryItemTemplate">
+        <div class="gallery__item">
+          <img class="gallery__img" src="" />
+          <div class="gallery__caption"></div>
+        </div>
+      </template>
+
+      <section class="footer">
+        <div class="footer__pagination"></div>
+      </section>
+
+      <template id="spinnerTemplate">
+        <div class="spinner">
+          <div class="spinner__overlay">
+            <p>Loading..</p>
+          </div>
+        </div>
+      </template>
+
+      <template id="paginationTemplate">
+        <ul class="pagination">
+          <li class="pagination__item prev-page">
+            <i class="bx bx-chevron-left"></i>
+          </li>
+          <li class="pagination__item next-page">
+            <i class="bx bx-chevron-right"></i>
+          </li>
+        </ul>
+      </template>
+
+      <template id="paginationItemTemplate">
+        <li class="pagination__item"></li>
+      </template>
+    </div>
+    <script src="/src/script.js"></script>
+  </body>
+</html>

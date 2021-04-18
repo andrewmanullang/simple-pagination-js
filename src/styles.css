@@ -1,0 +1,76 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.content,
+.footer {
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 440px;
+  text-align: center;
+}
+
+.gallery__img {
+  border-radius: 8px;
+}
+
+.gallery__caption {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.footer {
+  margin-top: 48px;
+}
+
+.footer__pagination {
+  text-align: center;
+}
+
+.pagination {
+  padding: 0;
+}
+
+.pagination__item {
+  color: #5e626a;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  list-style: none;
+  line-height: 16px;
+  vertical-align: middle;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-out;
+}
+
+.pagination__item:not(.is-active):hover {
+  background-color: #e0e6ed;
+}
+
+.pagination__item.is-active {
+  background: #f03d6e;
+  color: #fff;
+}
+
+.pagination__item.disabled {
+  color: #eee;
+}
+
+.pagination__item.disabled:hover {
+  background: none;
+  cursor: default;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
