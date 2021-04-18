@@ -33,8 +33,8 @@ const renderPagination = ({ total, limit, page }) => {
     startPage = 1;
     endPage = totalPages;
   } else {
-    maxPagesBeforeCurrent = Math.floor(maxPages / 2); // 2
-    maxPagesAfterCurrent = Math.ceil(maxPages / 2) - 1; // 2
+    maxPagesBeforeCurrent = Math.floor(maxPages / 2);
+    maxPagesAfterCurrent = Math.ceil(maxPages / 2) - 1;
 
     if (currentPage <= maxPagesBeforeCurrent) {
       // current page near the start
@@ -111,7 +111,7 @@ const renderPagination = ({ total, limit, page }) => {
   footerPaginationEL.appendChild(paginationWrapper);
 };
 
-const renderSpinner = (isOn) => {
+const renderLoader = (isOn) => {
   const spinnerTemplate = document.querySelector("#spinnerTemplate");
   const spinnerEl = spinnerTemplate.content.cloneNode(true);
   const gallery = document.querySelector(".gallery");
@@ -142,9 +142,9 @@ const getData = (page) => {
     window.location.search = "";
   }
 
-  renderSpinner(true);
+  renderLoader(true);
   const { data: images, meta } = await getData(currentPage);
-  renderSpinner(false);
+  renderLoader(false);
 
   renderImages(images);
   renderPagination(meta);
